@@ -28,6 +28,25 @@ namespace MadLibs.Controllers
       myMadlibsVariable.Person = person;
       return View(myMadlibsVariable);
     }
+    [Route("/forms2")]
+    public ActionResult Forms2() { return View(); }
+    
+    [Route("/madlibs2")]
+    public ActionResult Madlibs2(string adjective, string foods, string verb, string saying, string noun, string foods2, string color, string ride, string animal, string person)
+    {
+      MadlibsVariable2 myMadlibsVariable2 = new MadlibsVariable2();
+      myMadlibsVariable2.Adjective = adjective;
+      myMadlibsVariable2.Foods = foods;
+      myMadlibsVariable2.Verb = verb;
+      myMadlibsVariable2.Saying = saying;
+      myMadlibsVariable2.Noun = noun;
+      myMadlibsVariable2.Foods2 = foods2;
+      myMadlibsVariable2.Color = color;
+      myMadlibsVariable2.Ride = ride;
+      myMadlibsVariable2.Animal = animal;
+      myMadlibsVariable2.Person = person;
+      return View(myMadlibsVariable2);
+    }
 
   }
 }
